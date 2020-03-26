@@ -15,8 +15,9 @@
 
 
     <% resource.avatar.attached? %>
-
-    <%= f.file_field :avatar %>
+    <%= f.label "Ajouter votre photo" %>:
+    <br>
+    <%= f.file_field :avatar, required: true %>
 <br>
 <br>
     <%= f.input :password,
