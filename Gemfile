@@ -15,7 +15,7 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
-
+gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
