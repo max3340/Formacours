@@ -5,5 +5,6 @@ class Teacher < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
     has_many :formations
+    has_one_attached :avatar
 
 end

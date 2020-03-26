@@ -4,5 +4,5 @@ class Student < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :formations
+  belongs_to :formation
 end

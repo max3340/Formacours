@@ -1,0 +1,9 @@
+<ul>
+<% @formations.each do |formation| %>
+<li>
+  <%= link_to formation.name, formations_show_path %>
+<p>Début: <%= formation.start_date %> / Fin: <%= formation.end_date %></p>
+<p>Formateur: <%= formation.teacher.first_name %> <%= formation.teacher.last_name %> <%= image_tag formation.teacher.avatar, witdh: 60, height: 60, class: "rounded-circle" %></p>
+</li>
+<% end %>
+</ul>
