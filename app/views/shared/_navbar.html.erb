@@ -24,7 +24,7 @@
           <%= image_tag current_teacher.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Modifier mon profil", "#", class: "dropdown-item" %>
-            <%= link_to "Tableau de bord", "#", class: "dropdown-item" %>
+            <%= link_to "Tableau de bord", dashboard_path, class: "dropdown-item" %>
             <%= link_to "Se déconnecter", destroy_teacher_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
