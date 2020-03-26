@@ -2,6 +2,7 @@ class FormationsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def show
+    @formation = Formation.find(params[:id])
   end
 
   def index
