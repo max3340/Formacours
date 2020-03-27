@@ -1,0 +1,4 @@
+<%= image_tag @lesson.cover_photo %>
+<%= link_to @lesson.cover_photo.filename, rails_blob_path(@lesson.cover_photo, disposition: "attachment") %>
+<%= link_to "Supprimer le cours", lesson_path(@lesson), method: :delete, data: {confirm: "Vous êtes sûr ?"} %>
+

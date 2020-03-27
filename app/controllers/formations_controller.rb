@@ -3,6 +3,7 @@ class FormationsController < ApplicationController
 
   def show
     @formation = Formation.find(params[:id])
+
   end
 
   def index
@@ -10,9 +11,13 @@ class FormationsController < ApplicationController
   end
 
   def edit
+    @formation = Formation.find(params[:id])
   end
 
   def update
+    @formation = Formation.find(params[:id])
+    @formation.update(formation_params)
+    redirect_to formation_path(@formation)
   end
 
   def create
@@ -33,6 +38,9 @@ class FormationsController < ApplicationController
   end
 
   def destroy
+    @formation = Formation.find(params[:id])
+    @formation.destroy
+    redirect_to formations_path
   end
 
   private
