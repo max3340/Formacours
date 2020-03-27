@@ -1,5 +1,5 @@
 <ul>
 <% @teacher.formations.each do |formation| %>
-<li><%= formation.name %></li>
+<li><%= link_to formation.name, formation_path(formation) %></li>
 <% end %>
 </ul>
