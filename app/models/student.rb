@@ -5,4 +5,9 @@ class Student < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :formation
+  has_one_attached :avatar
+
+  validates :first_name, presence: true
+    validates :last_name, presence: true
+    validates :avatar, presence: true
 end
