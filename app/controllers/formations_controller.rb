@@ -2,9 +2,14 @@ class FormationsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def show
+    @students = Student.all
     @formation = Formation.find(params[:id])
-
   end
+
+  def show_student
+    @formation = Formation.find(params[:id])
+  end
+
 
   def index
     @formations = Formation.all

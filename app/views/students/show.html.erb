@@ -1,0 +1,5 @@
+<% @students.each do |student| %>
+<% if student.formation_id == current_teacher.formations.ids %>
+<%= student.first_name %>
+<% end %>
+<% end %>
