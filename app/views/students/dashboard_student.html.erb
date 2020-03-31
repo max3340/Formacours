@@ -1,0 +1,7 @@
+<ul>
+<li>
+ <%= link_to @student.formation.name, formation_path(@student.formation) %>
+<p>Début: <%= @student.formation.start_date %> / Fin: <%= @student.formation.end_date %></p>
+<p>Formateur: <%= @student.formation.teacher.first_name %> <%= @student.formation.teacher.last_name %> <%= image_tag @student.formation.teacher.avatar, witdh: 60, height: 60, class: "rounded-circle" %></p>
+</li>
+</ul>
