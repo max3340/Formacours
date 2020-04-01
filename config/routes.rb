@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  devise_for :students
-  devise_for :teachers
+  devise_for :students, path: 's'
+devise_for :teachers, path: 't'
   devise_for :users
 
   root to: 'pages#home'
