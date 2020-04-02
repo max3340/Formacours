@@ -1,15 +1,15 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" id="navbar2">
   <% if teacher_signed_in? %>
   <%= link_to dashboard_path, class: "navbar-brand" do %>
-  <h3 class="nom-compagny">Formacours</h3>
+  <h3 class="nom-compagny2">Formacours</h3>
   <% end %>
   <% elsif student_signed_in? %>
   <%= link_to dashboard_student_path, class: "navbar-brand" do %>
-  <h3 class="nom-compagny">Formacours</h3>
+  <h3 class="nom-compagny2">Formacours</h3>
   <% end %>
   <% else %>
   <%= link_to root_path, class: "navbar-brand" do %>
-  <h3 class="nom-compagny">Formacours</h3>
+  <h3 class="nom-compagny2">Formacours</h3>
   <% end %>
   <% end %>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -42,10 +42,10 @@
       </li>
       <% else %>
       <li class="nav-item">
-        <%= link_to "Connexion étudiant", new_student_session_path, class: "btn", id: "btn-navbar" %>
+        <%= link_to "Connexion étudiant", new_student_session_path, class: "btn", id: "btn-navbar2" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Connexion formateur", new_teacher_session_path, class: "btn", id: "btn-navbar" %>
+        <%= link_to "Connexion formateur", new_teacher_session_path, class: "btn", id: "btn-navbar2" %>
       </li>
       <% end %>
     </ul>
