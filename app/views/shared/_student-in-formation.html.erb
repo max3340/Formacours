@@ -1,0 +1,14 @@
+<div class="students">
+  <% @students.each do |student| %>
+<% if student.formation_id == @formation.id %>
+<%= student.first_name %> <%= student.last_name %>
+<% end %>
+<% end %>
+</div>
+<% else %>
+<ul>
+<% @formation.lessons.each do |lesson| %>
+<li><%= link_to lesson.name, lesson_path(lesson)  %></li>
+<% end %>
+</ul>
+<% end %>

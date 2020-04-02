@@ -14,16 +14,10 @@
   height: 500px;
   display: flex;
   justify-content: space-around;
-  text-align: center;
-  align-items: center;
-
-
 }
 
 .hero {
-  padding-top: 100px;
-  height: 700px;
-  width: 700px;
+  height: 600px;
 }
 
 .card-nav{
@@ -36,11 +30,10 @@
 }
 
 #link-navbar{
-  color: #57586E;
+  color: white;
   font-family: 'Kanit', sans-serif;
 }
 
 .class-main{
   background-color: #EDF2F7;
 }
-

@@ -1,6 +1,13 @@
 <%= render 'shared/navbar-signed-in' %>
-<ul>
-<% @teacher.formations.each do |formation| %>
-<li><%= link_to formation.name, formation_path(formation) %></li>
-<% end %>
-</ul>
+<div class="container">
+  <div class="my-formations-title">
+    <h1 style="text-align: center;" class="title-my-formations mb-5 mt-5">Mes formations</h1>
+  </div>
+  <div class="my-formations">
+    <div class="my-formations-card1">
+      <% @teacher.formations.each do |formation| %>
+        <%= render 'shared/my-formations-cards', formation: formation %>
+      <% end %>
+    </div>
+  </div>
+</div>
