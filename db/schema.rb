@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_27_101832) do
+ActiveRecord::Schema.define(version: 2020_04_02_142015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_03_27_101832) do
     t.bigint "formation_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "content"
     t.index ["formation_id"], name: "index_lessons_on_formation_id"
   end
 
@@ -65,7 +66,9 @@ ActiveRecord::Schema.define(version: 2020_03_27_101832) do
     t.string "location"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "formation_id"
     t.index ["email"], name: "index_students_on_email", unique: true
+    t.index ["formation_id"], name: "index_students_on_formation_id"
     t.index ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true
   end
 
