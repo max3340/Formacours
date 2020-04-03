@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'teachers#dashboard', as: :teacher_root
   get '/dashboard_student', to: 'students#dashboard_student', as: :student_root
-  get '/show_student', to: 'students#show'
+  get 'formations/:id/show_student', to: 'students#show', as: :student_show
 
   resources :formations
   resources :lessons

@@ -7,7 +7,8 @@ class StudentsController < ApplicationController
 
   def show
     @students = Student.all
-    @formation = Formation.first
+    @teacher = current_teacher
+    @formation = Formation.find(params[:id])
   end
 
 end

@@ -4,6 +4,7 @@
       <p class="card-text" style="text-align: center; font-family: 'Cantarell', sans-serif; color: #142850;">Début: <%= formation.start_date %></p>
       <p class="card-text" style="text-align: center; font-family: 'Cantarell', sans-serif; color: #142850;">Fin: <%= formation.end_date %></p>
       <p style="text-align: center;"><%= link_to "Voir détails de la formation", formation_path(formation), class:"btn btn-outline-primary" %></p>
+            <%= link_to "Voir les élèves de la formation", student_show_path(formation), class:"btn btn-outline-primary"  %>
     </div>
   </div>
 

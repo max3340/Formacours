@@ -1,5 +1,6 @@
 <div class="card w-20 mb-1" id="card-lesson" style="border-radius: .5rem;">
   <div class="card-body">
+    <p style="text-align: center; font-family: 'Cantarell', sans-serif; color: #142850;">Cours n°<%= lesson.id %></p>
     <h5 class="card-title" style="text-align: center; font-family: 'Cantarell', sans-serif; color: #142850;"><%= lesson.name %></h5>
     <p style="text-align: center;"><%= link_to "Télécharger le cours", rails_blob_path(lesson.cover_photo, disposition: "attachment")  %></p>
   </div>

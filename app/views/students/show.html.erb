@@ -1,6 +1,6 @@
 <%= render 'shared/navbar-signed-in' %>
-<% @students.each do |student| %>
-<% if student.formation_id == current_teacher.formations.ids %>
-<%= student.first_name %>
+<% @formation.students.each do |student| %>
+<div class="students">
+<%= render 'shared/students_card', student: student %>
 <% end %>
-<% end %>
+</div>

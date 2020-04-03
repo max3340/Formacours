@@ -19,7 +19,7 @@ class LessonsController < ApplicationController
 
 
     if @lesson.save
-      redirect_to @lesson
+      redirect_to teacher_root_path
     else
       render :new
     end
