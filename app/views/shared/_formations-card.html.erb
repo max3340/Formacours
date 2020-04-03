@@ -3,7 +3,8 @@
       <h5 class="card-title" style="text-align: center; font-family: 'Cantarell', sans-serif; color: #142850;"><%= formation.name %></h5>
       <p class="card-text" style="text-align: center; font-family: 'Cantarell', sans-serif; color: #142850;">Début: <%= formation.start_date %></p>
       <p class="card-text" style="text-align: center; font-family: 'Cantarell', sans-serif; color: #142850;">Fin: <%= formation.end_date %></p>
+      <p style="text-align: center; font-family: 'Cantarell', sans-serif; color: #142850;">Formateur: <%= formation.teacher.first_name %> <%= formation.teacher.last_name %></p>
+      <p style="text-align: center;"><%= image_tag formation.teacher.avatar, witdh: 60, height: 60, class: "rounded-circle" %></p>
       <p style="text-align: center;"><%= link_to "Voir détails de la formation", formation_path(formation), class:"btn btn-outline-primary" %></p>
     </div>
   </div>
-

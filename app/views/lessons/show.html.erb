@@ -1,8 +1,7 @@
 <%= render 'shared/navbar-signed-in' %>
-<% if teacher_signed_in? %>
-<%= link_to "Télécharger le cours", rails_blob_path(@lesson.cover_photo, disposition: "attachment") %>
-<%= link_to "Supprimer le cours", lesson_path(@lesson), method: :delete, data: {confirm: "Vous êtes sûr ?"} %>
-<%= link_to "Modifier le cours", edit_lesson_path  %>
-<% else %>
-<%= link_to "Télécharger le cours", rails_blob_path(@lesson.cover_photo, disposition: "attachment") %>
-<% end %>
+<div class="construction">
+  <div class="coucou">
+<h1>EN CONSTRUCTION</h1>
+<p>FUTUR CREATION QUIZZ ET FLASHCARD</p>
+</div>
+</div>

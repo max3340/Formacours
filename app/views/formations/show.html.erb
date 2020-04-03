@@ -1,7 +1,8 @@
 <%= render 'shared/navbar-signed-in' %>
 <div class="container" id="container-for-lessons">
+  <div class="retour-my-formations mb-3" style="top: 0px; left: 0px;" ><%= link_to "retour à mes formations", teacher_root_path, class:"btn btn-outline-dark" %></div>
   <div class="my-formation-title">
-    <h1 style="text-align: center;" class="title-my-formation mb-5 mt-5"><%= @formation.name %></h1>
+    <h1 style="text-align: center; font-family: 'Cantarell', sans-serif; color: #142850;" class="title-my-formation"><%= @formation.name %></h1>
   </div>
   <% if teacher_signed_in? && @formation.teacher_id == current_teacher.id %>
   <div class="links-teacher">
@@ -10,16 +11,15 @@
   <div class="cours-container mt-5">
     <div class="lesson">
       <% @formation.lessons.each do |lesson| %>
-      <%= render 'shared/formation-card', lesson: lesson %>
+      <%= render 'shared/lesson-card', lesson: lesson %>
       <% end %>
     </div>
     <% else %>
     <div class="lesson">
       <% @formation.lessons.each do |lesson| %>
-      <%= render 'shared/formation-card', lesson: lesson %>
+      <%= render 'shared/lesson-card-student', lesson: lesson %>
       <% end %>
     </div>
     <% end %>
   </div>
 </div>
-

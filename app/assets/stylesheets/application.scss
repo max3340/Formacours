@@ -23,7 +23,8 @@ font-family: 'Roboto Mono', monospace;
 
 .title1 {
   text-align: center;
-  padding-top: 200px;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 .card-features {
@@ -96,24 +97,108 @@ border-width: 1px;
   height: 700px;
 }
 
+.inscription2 {
+border-width: 1px;
+  border-color: grey;
+  border-radius: .5rem;
+  width: 400px;
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  height: 390px;
+}
+
 .my-formations {
+  height: 725px;
+}
+
+.my-formations2 {
   height: 725px;
 }
 
 .my-formations-card1 {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 
 .cours-container {
-  height: 800px;
+  height: 600px;
 }
 
 
 
 .lesson {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.main-container {
+  background-color: #EDF2F7;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    margin: auto;
+    padding: auto;
+    border-right: 16px solid transparent;
+    border-left: 16px solid transparent;
+
+    border-top: 20px solid black;
+
+}
+
+.retour-my-formations {
+  top: 0px;
+    left: 0px;
+    width: 217px;
+}
+
+.links-teacher {
+  width: 600px;
+  height: 50px;
+  margin: auto;
+  padding: auto;
+}
+
+#card-lesson{
+  width: 270px;
+  height: 110px;
+}
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+.construction {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coucou {
+  text-align: center;
+  color: red;
+}
+
+.oupsy {
+width: 200px;
+height: 0;
+margin: auto;
+padding: auto;
 }
