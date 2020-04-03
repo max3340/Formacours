@@ -1,0 +1,5 @@
+
+  <%= link_to "Ajouter un cours", new_lesson_path(formation_id: @formation.id), class:"btn btn-flat"  %>
+  <%= link_to "Modifier la formation", edit_formation_path, class:"btn btn-outline-warning"  %>
+  <%= link_to "Supprimer la formation", formation_path(@formation), method: :delete, data: {confirm: "Vous êtes sûr ?"}, class:"btn btn-danger" %>
+

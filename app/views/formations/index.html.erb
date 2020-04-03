@@ -1,9 +1,13 @@
-<ul>
-<% @formations.each do |formation| %>
-<li>
-  <%= link_to formation.name, formation_path(formation) %>
-<p>Début: <%= formation.start_date %> / Fin: <%= formation.end_date %></p>
-<p>Formateur: <%= formation.teacher.first_name %> <%= formation.teacher.last_name %> <%= image_tag formation.teacher.avatar, witdh: 60, height: 60, class: "rounded-circle" %></p>
-</li>
-<% end %>
-</ul>
+<%= render 'shared/navbar-signed-in' %>
+<div class="container">
+  <div class="my-formations-title">
+    <h1 style="text-align: center; font-family: 'Cantarell', sans-serif; color: #142850;" class="title-my-formations mb-5 mt-5">Toutes les formations</h1>
+  </div>
+  <div class="my-formations">
+    <div class="my-formations-card1">
+      <% @formations.each do |formation| %>
+      <%= render 'shared/formations-card', formation: formation %>
+      <% end %>
+    </div>
+  </div>
+</div>

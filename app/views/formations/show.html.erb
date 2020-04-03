@@ -1,32 +1,25 @@
-<h1><%= @formation.name %></h1>
-<% if student_signed_in? %>
-<ul>
-<% @formation.lessons.each do |lesson| %>
-<li><%= link_to lesson.name, lesson_path(lesson)  %></li>
-<% end %>
-</ul>
-<% elsif teacher_signed_in? && @formation.teacher_id == current_teacher.id %>
-<ul>
-<% @formation.lessons.each do |lesson| %>
-<li><%= link_to lesson.name, lesson_path(lesson)  %></li>
-<% end %>
-</ul>
-<%= link_to "Ajouter un cours", new_lesson_path(formation_id: @formation.id)  %>
-<%= link_to "Modifier la formation", edit_formation_path  %>
-<%= link_to "Supprimer la formation", formation_path(@formation), method: :delete, data: {confirm: "Vous êtes sûr ?"} %>
-<div class="students">
-  <% @students.each do |student| %>
-<% if student.formation_id == @formation.id %>
-<%= student.first_name %> <%= student.last_name %>
-<% end %>
-<% end %>
+<%= render 'shared/navbar-signed-in' %>
+<div class="container" id="container-for-lessons">
+  <div class="retour-my-formations mb-3" style="top: 0px; left: 0px;" ><%= link_to "retour à mes formations", teacher_root_path, class:"btn btn-outline-dark" %></div>
+  <div class="my-formation-title">
+    <h1 style="text-align: center; font-family: 'Cantarell', sans-serif; color: #142850;" class="title-my-formation"><%= @formation.name %></h1>
+  </div>
+  <% if teacher_signed_in? && @formation.teacher_id == current_teacher.id %>
+  <div class="links-teacher">
+    <%= render 'shared/teachers-link-for-formation' %>
+  </div>
+  <div class="cours-container mt-5">
+    <div class="lesson">
+      <% @formation.lessons.each do |lesson| %>
+      <%= render 'shared/lesson-card', lesson: lesson %>
+      <% end %>
+    </div>
+    <% else %>
+    <div class="lesson">
+      <% @formation.lessons.each do |lesson| %>
+      <%= render 'shared/lesson-card-student', lesson: lesson %>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
 </div>
-<% else %>
-<ul>
-<% @formation.lessons.each do |lesson| %>
-<li><%= link_to lesson.name, lesson_path(lesson)  %></li>
-<% end %>
-</ul>
-<% end %>
-
-
